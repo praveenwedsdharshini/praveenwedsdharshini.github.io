@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#246b66" />
+  <meta name="description" content="You're invited to the wedding of Praveenkumar Devadharshini — 25–26 February 2027, Madurai." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://praveenwedsdharshini.github.io/" />
+  <meta property="og:title" content="Praveenkumar & Devadharshini · Wedding Invitation" />
+  <meta property="og:description" content="Together with our families, we invite you to celebrate our wedding · 25–26 February 2027" />
+  <meta property="og:image" content="assets/images/og-preview.jpg" />
+  <meta property="og:image:secure_url" content="assets/images/og-preview.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Praveenkumar and Devadharshini wedding invitation" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Praveenkumar & Devadharshini · Wedding Invitation" />
+  <meta name="twitter:description" content="Join us for three events of joy · 25–26 February 2027" />
+  <meta name="twitter:image" content="assets/images/og-preview.jpg" />
+  <title>Praveenkumar & Devadharshini · Wedding</title>
+  <!-- <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" /> -->
+  <link rel="icon" href="assets/icons/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/icons/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Josefin+Sans:wght@300;400;500;600&family=Noto+Sans+Tamil:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="is-veiled">
+
+  <!-- ENTRY VEIL -->
+  <div class="entry-veil" id="entryVeil" role="dialog" aria-modal="true" aria-labelledby="entryVeilTitle">
+    <button type="button" class="entry-veil__hit interactive" id="entryVeilBtn" data-tap aria-describedby="entryVeilHint">
+      <span class="entry-veil__sheer" aria-hidden="true"></span>
+
+      <span class="entry-veil__content">
+        <span class="entry-veil__eyebrow tamil">திருமண அழைப்பிதழ்</span>
+        <span class="entry-veil__title" id="entryVeilTitle">Praveenkumar & Devadharshini</span>
+        <span class="entry-veil__line" aria-hidden="true"></span>
+        <span class="entry-veil__cta">Begin</span>
+        <span class="entry-veil__hint" id="entryVeilHint">Tap gently to enter</span>
+      </span>
+    </button>
+  </div>
+
+  <!-- DECORATIVE SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="kolam-line" viewBox="0 0 320 40">
+      <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+        <path d="M10 20h52" />
+        <circle cx="78" cy="20" r="3.2" />
+        <path d="M86 20c8-14 22-14 30 0s22 14 30 0 22-14 30 0 22-14 30 0 22-14 30 0" />
+        <circle cx="242" cy="20" r="3.2" />
+        <path d="M250 20h60" />
+        <circle cx="160" cy="20" r="5.5" />
+        <circle cx="160" cy="20" r="2" fill="currentColor" stroke="none" />
+        <path d="M160 8v4M160 28v4M148 20h4M168 20h4" />
+      </g>
+    </symbol>
+
+    <symbol id="kolam-dot" viewBox="0 0 48 48">
+      <g fill="none" stroke="currentColor" stroke-width="1.2">
+        <circle cx="24" cy="24" r="16" />
+        <circle cx="24" cy="24" r="8" />
+        <circle cx="24" cy="24" r="2.5" fill="currentColor" stroke="none" />
+        <path d="M24 4v6M24 38v6M4 24h6M38 24h6" stroke-linecap="round" />
+      </g>
+    </symbol>
+  </svg>
+
+  <div class="grain" aria-hidden="true"></div>
+  <canvas id="petals" class="petals" aria-hidden="true"></canvas>
+  <div id="ripples" class="ripples" aria-hidden="true"></div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__ring"></span>
+    <span class="cursor__dot"></span>
+  </div>
+
+  <!-- FLOATING ACTION BUTTONS -->
+  <div class="float-dock" role="toolbar" aria-label="Share and music">
+
+    <button type="button" class="icon-btn icon-btn--wa interactive" id="shareBtn" data-tap aria-label="Share on WhatsApp">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.82c2.17 0 4.2.85 5.73 2.38a8.07 8.07 0 0 1 2.37 5.73c0 4.46-3.63 8.09-8.1 8.09-1.42 0-2.8-.37-4.02-1.07l-.29-.17-3.12.82.83-3.04-.19-.31a8.08 8.08 0 0 1-1.24-4.32c0-4.46 3.64-8.1 8.1-8.1zm4.52 10.32c-.2-.1-1.18-.58-1.36-.65-.18-.07-.31-.1-.44.1-.13.2-.5.65-.62.78-.11.13-.23.15-.43.05-.2-.1-.84-.31-1.6-.99-.59-.53-.99-1.18-1.1-1.38-.12-.2-.01-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.07-.13.03-.25-.02-.35-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.33h-.38c-.13 0-.34.05-.52.25-.18.2-.68.66-.68 1.62 0 .95.7 1.87.8 2 .1.13 1.37 2.09 3.32 2.93 1.95.84 1.95.56 2.3.53.35-.03 1.18-.48 1.34-.95.17-.46.17-.86.12-.95-.05-.08-.18-.13-.38-.23z"/>
+      </svg>
+    </button>
+
+    <button type="button" class="icon-btn icon-btn--music interactive" id="musicBtn" aria-pressed="false" aria-label="Play music" data-tap>
+      <span class="icon-btn__speaker icon-btn__speaker--on" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 5 6 9H3v6h3l5 4V5z"/>
+          <path d="M15.5 8.5a5 5 0 0 1 0 7"/>
+          <path d="M18.5 5.5a9 9 0 0 1 0 13"/>
+        </svg>
+      </span>
+
+      <span class="icon-btn__speaker icon-btn__speaker--off" aria-hidden="true" hidden>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 5 6 9H3v6h3l5 4V5z"/>
+          <path d="m23 9-6 6M17 9l6 6"/>
+        </svg>
+      </span>
+    </button>
+  </div>
+
+  <!-- AUDIO -->
+  <audio id="bgMusic" loop preload="none" playsinline>
+    <source src="assets/audio/bgmusic.mp3" type="audio/mpeg" />
+  </audio>
+
+  <audio id="bloopSound" preload="auto">
+    <source src="assets/audio/bloop.mp3" type="audio/mpeg" />
+  </audio>
+
+  <main class="page">
+    <div class="page__texture" aria-hidden="true"></div>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+
+      <div class="hero__wash" aria-hidden="true"></div>
+
+      <div class="hero__parallax" id="heroParallax">
+        <div class="hero__layer hero__layer--back" data-speed="0.25">
+          <img
+            src="assets/images/couple-2.jpg"
+            alt=""
+            class="hero__img"
+            width="1200"
+            height="1600"
+            fetchpriority="high"
+          />
+        </div>
+
+        <div class="hero__veil" data-speed="0.4" aria-hidden="true"></div>
+        <div class="hero__glow" data-speed="0.55" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__content" data-speed="0.12">
+
+        <div class="kolam kolam--hero" aria-hidden="true">
+          <svg viewBox="0 0 320 40"><use href="#kolam-line" /></svg>
+        </div>
+
+        <p class="eyebrow tamil">திருமண அழைப்பிதழ்</p>
+
+        <h1 class="names">
+          <span class="names__groom">Praveenkumar</span>
+          <span class="names__amp">&</span>
+          <span class="names__bride">Devadharshini</span>
+        </h1>
+
+        <p class="hero__sub">are getting married</p>
+
+        <p class="hero__date">25 &amp; 26 February 2027</p>
+
+        <div class="countdown" id="countdown" aria-label="Countdown to Muhurtham">
+          <div class="countdown__unit">
+            <span class="countdown__num" data-unit="days">00</span>
+            <span class="countdown__label">Days</span>
+          </div>
+          <div class="countdown__unit">
+            <span class="countdown__num" data-unit="hours">00</span>
+            <span class="countdown__label">Hours</span>
+          </div>
+          <div class="countdown__unit">
+            <span class="countdown__num" data-unit="mins">00</span>
+            <span class="countdown__label">Mins</span>
+          </div>
+          <div class="countdown__unit">
+            <span class="countdown__num" data-unit="secs">00</span>
+            <span class="countdown__label">Secs</span>
+          </div>
+        </div>
+
+        <p class="countdown__hint">until Muhurtham · 26 Feb · 6:00 AM</p>
+
+        <p class="scroll-cue hero__scroll-hint" aria-hidden="true">
+          <span>Our celebrations</span>
+          <span class="hero__scroll-hint__sub">Scroll for invite</span>
+          <span class="scroll-cue__arrow"></span>
+        </p>
+
+      </div>
+    </section>
+
+    <div class="kolam-divider" aria-hidden="true">
+      <svg viewBox="0 0 320 40"><use href="#kolam-line" /></svg>
+    </div>
+
+    <!-- INVITATION -->
+    <section class="invite section" id="invite">
+
+      <div class="invite__grid">
+
+        <figure class="invite__photo reveal">
+          <img
+            src="assets/images/couple-4.jpg"
+            alt="Wedding celebration photograph"
+            width="1000"
+            height="1250"
+            loading="lazy"
+          />
+        </figure>
+
+        <div class="invite__copy reveal">
+
+          <p class="invite__lead">
+            With the blessings of our families,
+            <strong>Praveenkumar</strong>&<strong>Devadharshini</strong>
+            joyfully invite you to celebrate their engagement, wedding and reception.
+          </p>
+
+          <p class="tamil soft">
+            வாழ்வின் இனிய பயணத்தில்
+            உங்கள் வருகையையும் வாழ்த்துகளையும் அன்புடன் வேண்டுகிறோம்.
+          </p>
+
+          <div class="parents">
+
+            <div class="parents__side">
+              <h3>Groom's parents</h3>
+              <p>R. Nagarajan</p>
+              <p>K. Jeyanthi</p>
+            </div>
+
+            <div class="parents__divider" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><use href="#kolam-dot" /></svg>
+            </div>
+
+            <div class="parents__side">
+              <h3>Bride's parents</h3>
+              <p>R. Karthikeyan</p>
+              <p>K. Usharani</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="kolam-divider" aria-hidden="true">
+      <svg viewBox="0 0 320 40"><use href="#kolam-line" /></svg>
+    </div>
+
+    <!-- MEMORIES -->
+    <section class="memories section" id="memories">
+
+      <div class="section-head reveal">
+        <p class="eyebrow">Our special moments</p>
+        <h2 class="section-title">A little of us</h2>
+        <p class="section-lead">
+          A celebration of love, family, togetherness and the beautiful journey ahead.
+        </p>
+      </div>
+
+      <div class="memory-stack">
+
+        <article class="memory memory--left reveal">
+          <div class="memory__frame">
+            <img src="assets/images/couple-3.jpg" alt="Wedding memory photograph" width="1000" height="1250" loading="lazy" />
+          </div>
+
+          <div class="memory__caption">
+            <span class="memory__word">Together</span>
+            <p class="memory__kicker">A beautiful beginning</p>
+            <p>Two hearts, two families and a lifetime of beautiful memories waiting to unfold.</p>
+            <p class="tamil soft">இரு மனங்கள் இணையும் இனிய தருணம்</p>
+          </div>
+        </article>
+
+        <article class="memory memory--right reveal">
+          <div class="memory__frame">
+            <img src="assets/images/couple-7.jpg" alt="Wedding celebration photograph" width="1000" height="1250" loading="lazy" />
+          </div>
+
+          <div class="memory__caption">
+            <span class="memory__word">Promise</span>
+            <p class="memory__kicker">A forever kind of love</p>
+            <p>Hand in hand, heart to heart — beginning a journey filled with love and blessings.</p>
+            <p class="tamil soft">அன்பும் நம்பிக்கையும் நிறைந்த பயணம்</p>
+          </div>
+        </article>
+
+        <article class="memory memory--left memory--hands reveal">
+          <div class="memory__frame memory__frame--wide">
+            <img src="assets/images/couple-5.jpg" alt="Wedding details photograph" width="1200" height="800" loading="lazy" />
+          </div>
+
+          <div class="memory__caption">
+            <span class="memory__word">Blessed</span>
+            <p class="memory__kicker">The joy of family</p>
+            <p>Our special days become even more meaningful with the blessings of our loved ones.</p>
+            <p class="tamil soft">குடும்பத்தின் அன்பும் ஆசீர்வாதமும்</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <div class="kolam-divider" aria-hidden="true">
+      <svg viewBox="0 0 320 40"><use href="#kolam-line" /></svg>
+    </div>
+
+    <!-- SCRATCH CARD -->
+    <section class="scratch-section section" id="scratch">
+
+      <div class="section-head reveal">
+        <p class="eyebrow">A little surprise</p>
+        <h2 class="section-title">Scratch to reveal</h2>
+        <p class="scratch-hint">Swipe the gold foil gently</p>
+      </div>
+
+      <div class="scratch reveal" id="scratchCard">
+
+        <div class="scratch__reveal">
+          <p class="scratch__eyebrow">Muhurtham</p>
+          <p class="scratch__date">26 · 02 · 2027</p>
+          <p class="scratch__time">06:00 AM onwards</p>
+          <p class="tamil soft scratch__blessing">சுப முகூர்த்தம் · மங்களம்</p>
+        </div>
+
+        <canvas class="scratch__canvas interactive" id="scratchCanvas" aria-label="Scratch card"></canvas>
+
+        <p class="scratch__guide" id="scratchGuide">Scratch here</p>
+      </div>
+    </section>
+
+    <div class="kolam-divider" aria-hidden="true">
+      <svg viewBox="0 0 320 40"><use href="#kolam-line" /></svg>
+    </div>
+
+    <!-- EVENTS -->
+    <section class="events section" id="events">
+
+      <div class="section-head reveal">
+        <p class="eyebrow">Join us for</p>
+        <h2 class="section-title">Three celebrations of joy</h2>
+        <p class="section-lead">
+          Three special occasions, one beautiful beginning. Your presence will make our celebrations complete.
+        </p>
+      </div>
+
+      <ol class="timeline">
+
+        <!-- ENGAGEMENT -->
+        <li class="timeline__item reveal">
+
+          <div class="timeline__when">
+            <span class="timeline__day">Thursday</span>
+            <span class="timeline__date">25</span>
+            <span class="timeline__month">Feb 2027</span>
+          </div>
+
+          <div class="timeline__body">
+            <h3>Nichayathartham</h3>
+            <p class="timeline__time">06:30 PM onwards</p>
+            <p>Join us as our families come together to celebrate the beautiful promise of forever.</p>
+            <p class="tamil soft">நிச்சயதார்த்தம்</p>
+
+            <div class="cal-actions">
+              <a class="link-btn interactive" data-gcal="engagement" href="#" target="_blank" rel="noopener noreferrer" data-tap>
+                Add to Calendar
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- WEDDING -->
+        <li class="timeline__item timeline__item--feature reveal">
+
+          <div class="timeline__badge">Muhurtham</div>
+
+          <div class="timeline__when">
+            <span class="timeline__day">Friday</span>
+            <span class="timeline__date">26</span>
+            <span class="timeline__month">Feb 2027</span>
+          </div>
+
+          <div class="timeline__body">
+            <h3>Muhurtham</h3>
+            <p class="timeline__time">06:00 AM onwards</p>
+            <p>The sacred beginning of a lifetime together. We would be honoured by your presence and blessings.</p>
+            <p class="tamil soft">சுப முகூர்த்தம்</p>
+
+            <div class="cal-actions">
+              <a class="link-btn interactive" data-gcal="wedding" href="#" target="_blank" rel="noopener noreferrer" data-tap>
+                Add to Calendar
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- RECEPTION -->
+        <!-- <li class="timeline__item reveal">
+
+          <div class="timeline__when">
+            <span class="timeline__day">Sunday</span>
+            <span class="timeline__date">28</span>
+            <span class="timeline__month">Feb 2027</span>
+          </div>
+
+          <div class="timeline__body">
+            <h3>Reception</h3>
+            <p class="timeline__time">06:00 PM onwards</p>
+            <p>An evening of happiness, laughter and celebration with our family and friends.</p>
+            <p class="tamil soft">வரவேற்பு</p>
+
+            <div class="cal-actions">
+              <a class="link-btn interactive" data-gcal="reception" href="#" target="_blank" rel="noopener noreferrer" data-tap>
+                Add to Calendar
+              </a>
+            </div>
+          </div>
+        </li> -->
+
+      </ol>
+    </section>
+
+    <div class="kolam-divider" aria-hidden="true">
+      <svg viewBox="0 0 320 40"><use href="#kolam-line" /></svg>
+    </div>
+
+    <!-- VENUE -->
+    <section class="venue section" id="venue">
+
+      <div class="venue__top">
+
+        <div class="venue__card reveal">
+          <p class="eyebrow">Where to find us</p>
+          <h2 class="section-title">Our Venue</h2>
+
+          <h3 class="venue__name selectable">GKM Palace</h3>
+
+          <address class="venue__address selectable">
+            Madurai,<br />
+            Tamil Nadu, India
+          </address>
+
+          <div class="venue__actions">
+
+            <a
+              class="btn interactive"
+              href="https://www.google.com/maps/search/?api=1&query=GKM+Palace%2C+Madurai"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-tap
+            >
+              Open in Maps
+            </a>
+
+            <a
+              class="btn btn--wa interactive"
+              id="shareBtnVenue"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-tap
+            >
+              <span class="btn__wa" aria-hidden="true">♥</span>
+              WhatsApp
+            </a>
+
+          </div>
+        </div>
+
+        <div class="venue__hands reveal">
+          <img
+            src="assets/images/couple-6.jpg"
+            alt="Wedding celebration photograph"
+            width="1200"
+            height="800"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+
+      <!-- MAP AND DIRECTIONS -->
+      <div class="venue__top reach reveal">
+
+        <div class="reach__map">
+          <div class="reach__map-media">
+
+            <iframe
+              title="Map to GKM Palace, Madurai"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+              src="https://maps.google.com/maps?q=GKM%20Palace%2C%20Madurai%2C%20Tamil%20Nadu&z=14&output=embed"
+            ></iframe>
+
+            <div class="reach__map-veil" aria-hidden="true"></div>
+
+            <a
+              class="reach__pin interactive"
+              href="https://www.google.com/maps/search/?api=1&query=GKM+Palace%2C+Madurai"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-tap
+            >
+              <span class="reach__pin-dot" aria-hidden="true"></span>
+
+              <span class="reach__pin-text">
+                <strong>GKM Palace</strong>
+                <em>Tap for directions</em>
+              </span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="venue__card reach__card">
+
+          <p class="eyebrow">How to reach</p>
+          <h2 class="section-title">A quick guide</h2>
+
+          <ul class="reach__tips">
+            <li><strong>Venue:</strong> GKM Palace, Madurai.</li>
+            <li><strong>By car / cab:</strong> Search “GKM Palace, Madurai” in Google Maps.</li>
+            <li><strong>Location:</strong> Madurai, Tamil Nadu.</li>
+          </ul>
+
+          <div class="venue__actions">
+            <a
+              class="btn interactive"
+              href="https://www.google.com/maps/search/?api=1&query=GKM+Palace%2C+Madurai"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-tap
+            >
+              Open full map directions
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="kolam-divider" aria-hidden="true">
+      <svg viewBox="0 0 320 40"><use href="#kolam-line" /></svg>
+    </div>
+
+    <!-- CLOSING -->
+    <section class="closing section" id="closing">
+
+      <div class="closing__inner reveal">
+
+        <p class="eyebrow">With gratitude</p>
+
+        <h2 class="section-title">
+          We can't wait to celebrate with you
+        </h2>
+
+        <p class="closing__names">
+          Praveenkumar <span class="amp">&</span> Devadharshini
+        </p>
+
+        <p class="tamil soft">அன்புடன் வரவேற்கிறோம்</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>With love · Praveenkumar & Devadharshini · February 2027</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <canvas id="confetti" class="confetti" aria-hidden="true"></canvas>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
