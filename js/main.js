@@ -7,14 +7,14 @@
   const MUHURTHAM = new Date("2027-02-26T06:00:00+05:30").getTime();
 
   // Replace with your actual published invitation URL.
-  const SITE_URL = "YOUR_PUBLISHED_INVITATION_URL";
+  const SITE_URL = "https://praveenwedsdharshini.github.io/";
 
   const VENUE = "GKM Palace, Madurai, Tamil Nadu";
 
   const MAPS =
     "https://www.google.com/maps/search/?api=1&query=GKM+Palace%2C+Madurai";
 
-  const reduceMotion = windowI.matchMedia(
+  const reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
 
