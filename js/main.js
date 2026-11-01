@@ -792,7 +792,7 @@
   //   SITE_URL;
 
     const shareText =
-    "You're invited to the wedding of Praveenkumar & Devadharshini!\n\n -  Nichayathartham (Engagement) · 25 Feb 2027, 6:30 PM onwards\n\n - Muhurtham · 26 Feb 2027, 06:00 AM – 07:29 AM\n\n - GKM Palace, Madurai.\n - Reception · 28 Feb 2027, 06:00 PM onwards\n\n Coimbatore" +
+    "You're invited to the wedding of Praveenkumar & Devadharshini!\n\n -  Nichayathartham (Engagement) · 25 Feb 2027, 6:30 PM onwards\n - Muhurtham · 26 Feb 2027, 06:00 AM – 07:29 AM\n\ - GKM Palace, Madurai.\n\n - Reception · 28 Feb 2027, 06:00 PM onwards\n\ Coimbatore\n" + 
     SITE_URL;
 
   const waUrl =
