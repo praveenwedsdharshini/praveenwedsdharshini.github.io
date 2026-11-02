@@ -796,7 +796,7 @@
     // SITE_URL;
 
     const shareText =
-    "With Love and Happiness\n\n With the love and blessings of our families, we are delighted to begin a beautiful new chapter of our lives together.\n\n As we celebrate our engagement and wedding, we would be truly happy to share these precious moments with you. Your presence and blessings would make our special day even more meaningful and memorable.\n\n We warmly invite you to join us as we celebrate our love and begin our journey together as one.\n\n You're Invited to the Wedding of Praveenkumar and Devadharshini\n\n Engagement\n25 February 2027 | 6:30 PM onwards\n\n Wedding\n 26 February 2027 | 6:00 AM – 7:29 AM\n\n Venue\n GKM Palace,\n Thirumangalam, Madurai\n\n Your presence and blessings will make our celebration truly special.\n\n" +
+    "With Love in Our Hearts and Dreams for Tomorrow\n\nWith happy hearts and our families’ blessings, we invite you to celebrate one of the most special moments of our lives. Having you with us would make our day even more meaningful as we begin our forever together.\n\nPraveenkumar ❤️ Devadharshini\n\nEngagement:\n25 February 2027 | 6:30 PM onwards\n\nWedding:\n 26 February 2027 | 6:00 AM – 7:29 AM\n\nVenue:\nGKM Palace,\nThirumangalam, Madurai\n\nYour presence and blessings will make our celebration truly special.\n\n" +
     SITE_URL;
 
   const waUrl =
