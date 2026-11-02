@@ -791,8 +791,12 @@
   //   "Location: " + MAPS + "\n\n" +
   //   SITE_URL;
 
+    // const shareText =
+    // "Greetings! \n\n As we step into a new chapter of out lives, we would love for your to be a part of our special day. Your presence would make this occasioin even more beautiful and memorable.\n\n We warmly invite you to join us for our wedding and bless us as we begin this beautiful journey together.\n\n You're invited to the wedding of Praveenkumar & Devadharshini!\n\nEngagement - 25 Feb 2027, 6:30 PM\n Wedding - 26 Feb 2027, 06:00 AM – 07:29 AM\n\nGKM Palace, Thirumangalam, Madurai.\n\n" + 
+    // SITE_URL;
+
     const shareText =
-    "You're invited to the wedding of Praveenkumar & Devadharshini!\n\n -  Nichayathartham (Engagement) · 25 Feb 2027, 6:30 PM onwards\n - Muhurtham · 26 Feb 2027, 06:00 AM – 07:29 AM\n\ - GKM Palace, Madurai.\n\n - Reception · 28 Feb 2027, 06:00 PM onwards\n\ Coimbatore\n" + 
+    "With Love and Happiness\n\n With the love and blessings of our families, we are delighted to begin a beautiful new chapter of our lives together.\n\n As we celebrate our engagement and wedding, we would be truly happy to share these precious moments with you. Your presence and blessings would make our special day even more meaningful and memorable.\n\n We warmly invite you to join us as we celebrate our love and begin our journey together as one.\n\n You're Invited to the Wedding of Praveenkumar and Devadharshini\n\n Engagement\n25 February 2027 | 6:30 PM onwards\n\n Wedding\n 26 February 2027 | 6:00 AM – 7:29 AM\n\n Venue\n GKM Palace,\n Thirumangalam, Madurai\n\n Your presence and blessings will make our celebration truly special.\n\n" +
     SITE_URL;
 
   const waUrl =
