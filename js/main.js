@@ -1,6 +1,14 @@
-
 (() => {
   "use strict";
+
+  /* ---------- Prevent scroll restoration on refresh ---------- */
+
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+
+  // Start at the top instantly (no smooth-scroll animation on load)
+  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
 
   /* ---------- Wedding details ---------- */
 
@@ -294,7 +302,7 @@
 
   /* ---------- Hero + responsive parallax ---------- */
 
- let scrollTicking = false;
+  let scrollTicking = false;
 
   function updateParallax() {
     if (!hero || reduceMotion) return;
@@ -317,7 +325,7 @@
       tiltEls.forEach((el) => {
         const r = el.getBoundingClientRect();
         const inView = r.bottom > 0 && r.top < viewH;
-        
+
         if (!inView) {
           tiltUpdates.push({ el, transform: "" });
           return;
@@ -336,10 +344,10 @@
 
         const rx = Math.max(-6, Math.min(6, -dy * 6));
         const ry = Math.max(-8, Math.min(8, dx * 8));
-        
-        tiltUpdates.push({ 
-          el, 
-          transform: `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translate3d(${dx * 4}px, ${dy * 3}px, 0)` 
+
+        tiltUpdates.push({
+          el,
+          transform: `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translate3d(${dx * 4}px, ${dy * 3}px, 0)`
         });
       });
     }
@@ -782,20 +790,7 @@
 
   /* ---------- WhatsApp share ---------- */
 
-  // const shareText =
-  //   "You're invited to the wedding of Praveenkumar & Devadharshini!\n\n" +
-  //   "- Engagement · 25 February 2027, 6:30 PM onwards\n" +
-  //   "- Wedding · 26 February 2027, 6:00 AM onwards\n" +
-  //   "- Reception · 28 February 2027, 6:00 PM onwards\n\n" +
-  //   "Venue: GKM Palace, Madurai\n" +
-  //   "Location: " + MAPS + "\n\n" +
-  //   SITE_URL;
-
-    // const shareText =
-    // "Greetings! \n\n As we step into a new chapter of out lives, we would love for your to be a part of our special day. Your presence would make this occasioin even more beautiful and memorable.\n\n We warmly invite you to join us for our wedding and bless us as we begin this beautiful journey together.\n\n You're invited to the wedding of Praveenkumar & Devadharshini!\n\nEngagement - 25 Feb 2027, 6:30 PM\n Wedding - 26 Feb 2027, 06:00 AM – 07:29 AM\n\nGKM Palace, Thirumangalam, Madurai.\n\n" + 
-    // SITE_URL;
-
-    const shareText =
+  const shareText =
     "With Love in Our Hearts and Dreams for Tomorrow\n\nWith happy hearts and our families’ blessings, we invite you to celebrate one of the most special moments of our lives. Having you with us would make our day even more meaningful as we begin our forever together.\n\nPraveenkumar ❤️ Devadharshini\n\nEngagement:\n25 February 2027 | 6:30 PM onwards\n\nWedding:\n 26 February 2027 | 6:00 AM – 7:29 AM\n\nVenue:\nGKM Palace,\nThirumangalam, Madurai\n\nYour presence and blessings will make our celebration truly special.\n\n" +
     SITE_URL;
 
